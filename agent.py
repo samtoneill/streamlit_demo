@@ -2,10 +2,8 @@ from langchain import OpenAI
 from langchain.agents import create_pandas_dataframe_agent
 import pandas as pd
 
-# Setting up the api key
-import os
 
-os.environ["OPENAI_API_KEY"] = "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"
+API_KEY = st.secrets["OPENAI_API_KEY"]
 
 
 def create_agent(filename: str):
