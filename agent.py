@@ -3,12 +3,9 @@ from langchain.agents import create_pandas_dataframe_agent
 import pandas as pd
 
 # Setting up the api key
-import environ
+import os
 
-env = environ.Env()
-environ.Env.read_env()
-
-API_KEY = env("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")
+os.environ["OPENAI_API_KEY"] = "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"
 
 
 def create_agent(filename: str):
