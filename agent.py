@@ -3,7 +3,9 @@ from langchain.agents import create_pandas_dataframe_agent
 import pandas as pd
 
 
-API_KEY = st.secrets["OPENAI_API_KEY"]
+import os
+
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 
 def create_agent(filename: str):
