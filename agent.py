@@ -5,7 +5,7 @@ import pandas as pd
 
 import os
 
-os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+os.environ["OPENAI_API_KEY"] = st.secrets["open_ai"]["OPENAI_API_KEY"]
 
 
 def create_agent(filename: str):
